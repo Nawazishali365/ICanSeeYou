@@ -76,7 +76,7 @@
                     <td>{{ min_temp | round(2) }}°C</td>
                 </tr>
             </table>
-        </div>    
+        </div>
         <div class="location-info">
             <h2>Your Location Information</h2>
             <table>
@@ -93,11 +93,13 @@
             </table>
         </div>
     </div>
-</body>
-   <script>
-            window.onload = function() {
-                alert("This website will access your location. Do you want to allow it?");
-            }
-        </script>
+    
+    <script>
+        // Ask for user's permission to access location
+        if (confirm("This website will access your location. Do you want to allow it?")) {
+        } else {
+            alert("Location access denied. Some functionalities may not work as expected.");
+        }
+    </script>
 </body>
 </html>

@@ -37,6 +37,7 @@ def index():
         'Your Postal': YourLoc.get('postal'),
         'Your Time Zone': YourLoc.get('timezone')
     }
+
     # Render the HTML template with data
     return render_template('index.html', temp=temp, feels_like=feels_like, max_temp=max_temp, min_temp=min_temp, location_data=location_data)
 
